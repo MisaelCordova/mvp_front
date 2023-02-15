@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 h1 {
-    margin-top: 40px;
+    margin-top: 30px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding-bottom: 30px;
@@ -14,7 +14,7 @@ span {
 }
 
 body {
-    height: 90vh;
+    height: 80vh;
     background: white url(../assets/background.png) center center no-repeat fixed;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
@@ -26,14 +26,14 @@ div#imagem {
     position: relative;
     left: 50%;
     transform: translateX(-49%);
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 div#dados {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 50px;
+    top: 20px;
     background-color: rgb(255, 251, 251);
     width: 500px;
     height: 600px;
@@ -44,7 +44,7 @@ div#dados {
 
 form {
     width: 500px;
-    margin: 40px;
+    margin-top: 30px;
     /*para ficar um input em cima do outro*/
     margin-bottom: 0px;
 }

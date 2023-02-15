@@ -9,7 +9,6 @@ $(function () {
 let tabela = document.querySelector("#tabela-uc")
 let linha = document.createElement("tr")
 let link = document.createElement("a")
-console.log(link)
 link.href = "#"
 let col1 = document.createElement("td")
 let col2 = document.createElement("td")

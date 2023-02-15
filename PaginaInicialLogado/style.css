@@ -19,7 +19,6 @@ main {
     background-color: #707070;
     height: 75vh;
     width: 100%;
-   
 }
 
 main>#caixaroxa {
@@ -56,15 +55,11 @@ main>#caixabranca {
 #caixabranca h1 {
     text-align: center;
     font-size: auto;
-    margin-bottom: 3%;
-    margin-top: 5%;
 }
 
 #pcaixabranca {
     position: relative;
-    text-align: center;
-    margin-bottom: 6%;
-    
+    text-align: center;  
 }
 
 #menu {

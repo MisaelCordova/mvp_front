@@ -23,7 +23,7 @@ div#imagem {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 90px;
+    margin-top: 80px;
 }
 
 div#dados {
@@ -33,7 +33,7 @@ div#dados {
     top: 50px;
     background-color: rgb(255, 251, 251);
     width: 553px;
-    height: 650px;
+    height: 600px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 1px 0px 30px rgb(193, 192, 199);
