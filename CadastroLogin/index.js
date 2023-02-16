@@ -33,7 +33,9 @@ const btnCadastrar = document.querySelector("form")
 btnCadastrar.addEventListener('submit', function (e) {
     e.preventDefault()
     if (validarEmail(email.value) && validarSenha()) {
-        let documentoDigitado;
+        if(documento.value.length == 14 || documento.value.length == 11)
+        {
+            let documentoDigitado;
         if (documento.value.length == 14) {
             documentoDigitado = documento.value.slice(0, 3) + documento.value.slice(4, 7) + documento.value.slice(8, 11) + documento.value.slice(12, 14)
         } else {
@@ -60,10 +62,17 @@ btnCadastrar.addEventListener('submit', function (e) {
             } else if(res.status == 404){
                 alert("Você não possui cadastro na distribuidora")
             } 
+            else if(res.status == 409){
+                alert("email ja cadastrado")
+            }
             else {
                 alert("Não foi possivel efetuar o cadastro")
             }
         })
+
+        }else{
+            alert("Formato de documento invalido")
+        }
     } else {
         alert("email errado")
     }
