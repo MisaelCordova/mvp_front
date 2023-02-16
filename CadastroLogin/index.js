@@ -3,11 +3,17 @@ function validarEmail(email) {
     return forma.test(email);
 }
 function validarSenha() {
-    if (senha1.value != senha.value) {
-        alert("Senhas diferentes!");
-        return false;
-    } else {
-        return true;
+    if (senha.value.length >=8){
+        if (senha1.value != senha.value) {
+            alert("Senhas diferentes!");
+            return false;
+        } else {
+            return true;
+        }
+    }
+    else{
+        alert("Senha muito curta");
+            return false;
     }
 }
 
