@@ -8,7 +8,7 @@
     <link rel="icon" href="../assets/icon_useall.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-    <script src="index.js" defer></script>
+    <script src="index.js"defer></script>
     <title>Cadastro</title>
 
 </head>
@@ -19,7 +19,7 @@
         <p>Faça seu cadastro para conseguir <br> fazer o login e ter acesso a sua UC</p>
 
         <section class="cad">
-            <form>
+            <form >
 
                     <fieldset>
 
@@ -52,16 +52,6 @@
                         <li>
                             <label for="email">E-mail</label>
                             <input required="" id="email" type="text" name="email" placeholder="Digite seu e-mail">
-                            <script>
-                                function validarEmail(email) {
-                                    var forma = /\S+@\S+\.\S+/;
-                                    return forma.test(email);
-                                }
-                                console.log(validarEmail('texto@texto.com')); // verdadeiro
-                                console.log(validarEmail('texto@texto')); // falso
-                                console.log(validarEmail('texto.com')); // falso
-                                console.log(validarEmail('texto')); // falso
-                            </script>
                         </li>
                         <li>
                             <label for="senha">Senha</label>
@@ -71,20 +61,8 @@
                         <li>
                             <label for="senhaC">Confirme sua Senha</label>
                             <input required="" id="senhaC" type="password" name="senhaC" placeholder="Confirme sua senha">
-                            <script>
-                                // function validarSenha() {
-                                //     senha = document.getElementsByName('senha').value;
-                                //     senhaC = document.getElementsByName('senhaC').value;
-                                //     if (senha != senhaC) {
-                                //         senhaC.setCustomValidity("Senhas diferentes!");
-                                //         return false;
-                                //     } else {
-                                //         return true;
-                                //     }
-                                // }
-                            </script>
                         </li>
-                        <li><button type="submit"> EFETUAR CADASTRO</button></li>
+                        <li><button type="submit" onclick="return validarSenha()"> EFETUAR CADASTRO</button></li>
 
                     </fieldset>
                     
@@ -92,6 +70,5 @@
         </section>
     </div>
     <div id="imagem"><img src="../assets/logo_useall.png" alt="Logo da useall"></div>
-
 </body>
 </html>
