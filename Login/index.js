@@ -51,7 +51,7 @@ btnEntrar.addEventListener("submit", function (e) {
     console.log(url + "/" + documentoDigitado);
     postBanco();
   } else {
-    alert("Insira um documento com formato falido");
+    alert("Insira um documento válido");
   }
 });
 
