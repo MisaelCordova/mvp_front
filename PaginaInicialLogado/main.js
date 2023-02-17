@@ -1,5 +1,6 @@
-const url = "https://localhost:7230/UC"
 
+const url = "https://localhost:7230/UC/"
+//import { teste } from "../Login";
 $(function () {
   $('#sair').on('click', function (event) {
 
@@ -9,15 +10,13 @@ $(function () {
 });
 let UCs = []
 
-
-
+/*+"/"+consumidor*/
 function getUCs() {
   let request = fetch(url)
   request.then(function (response) {
     response.json().then(function (vetorUCs) {
       UCs = vetorUCs
       criaList(vetorUCs)
-      // atualizarLista();
     })
   })
 }
@@ -45,10 +44,7 @@ function criaList(Ucs) {
 }
 getUCs();
 
-function atualizaPagina() {
 
-
-}
 
 
 
