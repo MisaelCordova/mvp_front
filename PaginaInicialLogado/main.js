@@ -1,3 +1,5 @@
+const url = "https://localhost:7230/UC"
+
 $(function () {
   $('#sair').on('click', function (event) {
 
@@ -5,25 +7,50 @@ $(function () {
       event.preventDefault();
   });
 });
+let UCs = []
 
-let tabela = document.querySelector("#tabela-uc")
-let linha = document.createElement("tr")
-let link = document.createElement("a")
-console.log(link)
-link.href = "#"
-let col1 = document.createElement("td")
-let col2 = document.createElement("td")
 
-let uc = "12345678"
-let end = "Rua São Martinho"
 
-let cabecalho = document.querySelector("#cabecalho")
-let corpo = document.querySelector("#corpo")
-col1.innerHTML = uc;
-col2.innerHTML = end;
-col1.appendChild(link)
-linha.appendChild(col1)
-linha.appendChild(col2)
-corpo.appendChild(linha)
+function getUCs() {
+  let request = fetch(url)
+  request.then(function (response) {
+    response.json().then(function (vetorUCs) {
+      UCs = vetorUCs
+      criaList(vetorUCs)
+      // atualizarLista();
+    })
+  })
+}
+
+function criaList(Ucs) {
+  console.log(Ucs)
+  let corpo = document.querySelector("#corpo")
+  for (let uc of UCs) {
+    let linha = document.createElement("tr")
+    let link = document.createElement("a")
+
+    link.href = "#"
+    let col1 = document.createElement("td")
+    let col2 = document.createElement("td")
+
+    col1.appendChild(link)
+    link.innerHTML = "00000"+uc.cod_uc;
+    col2.innerHTML = uc.bairro +","+uc.logradouro +","+ uc.num_casa
+
+    linha.appendChild(col1)
+    linha.appendChild(col2)
+    corpo.appendChild(linha)
+  }
+
+}
+getUCs();
+
+function atualizaPagina() {
+
+
+}
+
+
+
 
 
