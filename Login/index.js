@@ -5,7 +5,8 @@ var senha = document.querySelector("#password")
 const btnEntrar = document.querySelector("form")
 btnEntrar.addEventListener('submit', function(e){   
      e.preventDefault()
-     let documentoDigitado;
+     if(documento.value.length == 14 || documento.value.length == 11){
+        let documentoDigitado;
      if(documento.value.length == 14){
         documentoDigitado = documento.value.slice(0,3) + documento.value.slice(4,7) + documento.value.slice(8,11) + documento.value.slice(12,14)
      }else{
@@ -27,13 +28,20 @@ btnEntrar.addEventListener('submit', function(e){
     })
     console.log(request)
     request.then(function(res){
+        console.log(res.status)
         if(res.status == 200){
             window.location.href="../PaginaInicialLogado/index.html"
+
         }else if (res.status == 404){
             alert("Documento não cadastrado")
         }else if(res.status == 401){
             alert("Senha Incorreta")
         }
     })
+     }
+     else{
+        alert("Insira um documento com formato falido")
+     }
+     
 
 })
