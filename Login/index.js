@@ -19,7 +19,7 @@ function postBanco() {
   });
   request.then(function(res){
     if(res.status == 200){ 
-      window.location.href="../PaginaInicialLogado/index.html"
+      window.location.href="./PaginaInicialLogado/index.html"
     }else if (res.status == 404){
         alert("Documento não cadastrado")
     }else if(res.status == 401){
