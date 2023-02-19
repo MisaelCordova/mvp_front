@@ -21,7 +21,7 @@ function postBanco(documento, senha) {
   request.then(function(res){
     if(res.status == 200){ 
       res.json().then(function(cons){
-        window.location.href=`../PaginaInicialLogado/index.html?id=${cons.cod_Consumidor}`
+        window.location.href=`./PaginaInicialLogado/index.html?id=${cons.cod_Consumidor}`
       })
    
     }else if (res.status == 404){
@@ -55,7 +55,3 @@ btnEntrar.addEventListener("submit", function (e) {
   }
 });
 
-function teste() {
-  return consumidor;
-}
-console.log(teste());
