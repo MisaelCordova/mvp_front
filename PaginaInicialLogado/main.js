@@ -1,6 +1,7 @@
 
-const url = "https://localhost:7230/UC/"
-//import { teste } from "../Login";
+const url = "https://localhost:7230/UC/Consumidor/"
+const queryString = window.location.search
+const urlParams = new URLSearchParams(queryString)
 $(function () {
   $('#sair').on('click', function (event) {
 
@@ -9,10 +10,8 @@ $(function () {
   });
 });
 let UCs = []
-
-/*+"/"+consumidor*/
 function getUCs() {
-  let request = fetch(url)
+  let request = fetch(url+urlParams.get('id'))
   request.then(function (response) {
     response.json().then(function (vetorUCs) {
       UCs = vetorUCs
@@ -22,7 +21,6 @@ function getUCs() {
 }
 
 function criaList(Ucs) {
-  console.log(Ucs)
   let corpo = document.querySelector("#corpo")
   for (let uc of UCs) {
     let linha = document.createElement("tr")
