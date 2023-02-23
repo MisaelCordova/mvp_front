@@ -19,14 +19,16 @@ function getUCs() {
     })
   })
 }
-
+console.log(urlParams)
 function criaList(Ucs) {
   let corpo = document.querySelector("#corpo")
   for (let uc of UCs) {
+    console.log(urlParams.get('id'))
     let linha = document.createElement("tr")
     let link = document.createElement("a")
 
-    link.href = "#"
+    link.href = `../Paginafaturas/index.html?id=${urlParams.get('id')}&UC=${uc.cod_uc}`
+    console.log(link.href)
     let col1 = document.createElement("td")
     let col2 = document.createElement("td")
 
