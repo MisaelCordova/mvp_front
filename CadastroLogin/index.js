@@ -58,7 +58,7 @@ btnCadastrar.addEventListener('submit', function (e) {
             console.log(res.status)
             if (res.status == 204) {
                 alert("Usuário Cadastrado com sucesso")
-                window.location.href="../Login/index.html"
+                window.location.href="/Login/index.html"
             } else if(res.status == 404){
                 alert("Você não possui cadastro na distribuidora")
             } 
