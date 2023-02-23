@@ -44,16 +44,16 @@ Chart.Bar('chart', {
     data: data
 });
 
+let uc = document.querySelector("#unidade-consumidora")
 let nome = document.querySelector("#nome")
 let documento = document.querySelector("#cpfcnpj")
 let email = document.querySelector("#email")
 let telefone = document.querySelector("#telefone")
 let endereco = document.querySelector("#endereco")
-
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 
-console.log(urlParams.get('id'))
+uc.textContent = `Unidade Consumidora: ${urlParams.get('UC')}`
 fetch(`https://localhost:7230/Consumidor/${urlParams.get('id')}`)
 .then(response => response.json())
 .then(data => {
