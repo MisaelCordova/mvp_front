@@ -1,5 +1,5 @@
 body {
-    background: white url(assets/background.png) center center no-repeat fixed;
+    background: white url(../assets/background.png) center center no-repeat fixed;
     background-size: cover;
     height: 90vh;
     font-family: 'Roboto', sans-serif;

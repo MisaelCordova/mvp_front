@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/icon_useall.png">
+    <link rel="icon" href="../assets/icon_useall.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -16,7 +16,7 @@
 
 <body>
     <div id="cabecalho">
-        <img id="logo-cabecalho" src="assets/icon_useall.png" alt="" width="60px" height="60px">
+        <img id="logo-cabecalho" src="../assets/icon_useall.png" alt="" width="60px" height="60px">
         <h1>Bem <span>Vindo(a)</span></h1>
         <p id="unidade-consumidora">Unidade Consumidora: 12345678 </p>
     </div>
@@ -57,8 +57,14 @@
                 <h1 class="titulo">Vias em <span>Aberto</span></h1>
                 <p class="paragrafo-titulo">Abaixo estão todas as faturas em aberto. Selecione qual deseja visualizar o
                     boleto.</p>
-                <p><b>Segunda via: 17/01/2023 -</b><a class="linkpdf" href="#">Gerar PDF</a></p>
-                <p><b>Segunda via: 17/02/2023 -</b><a class="linkpdf" href="#">Gerar PDF</a></p>
+                    <table id="tabela-uc">
+                        <thead id="cabecalho">
+
+                        </thead>
+                        <tbody id="corpo">
+                           
+                        </tbody>
+                    </table>
             </div>
 
             <div id="gasto-cinza">
@@ -72,7 +78,7 @@
         </div>
     </div>
     <script src=" main.js"></script>
-    <img id="imgabaixo" src="assets/logo_useall.png" alt="logo useall">
+    <img id="imgabaixo" src="../assets/logo_useall.png" alt="logo useall">
 </body>
 
 </html>
