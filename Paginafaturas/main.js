@@ -59,7 +59,7 @@ fetch(`https://localhost:7230/Consumidor/${urlParams.get('id')}`)
 .then(data => {
     //console.log(data)
   nome.textContent = `Nome: ${data.nome_Consumidor}`
-  documento.textContent =`Cpf/Cnpj: ${data.doc_Consumidor}`
+  documento.textContent =`CPF/CNPJ: ${data.doc_Consumidor}`
   email.textContent =`E-mail: ${data.email}`
   telefone.textContent = `Telefone: ${data.telefone1}`
 
